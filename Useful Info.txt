@@ -1,0 +1,17 @@
+# Migrate all apps to the database
+python3.7 manage.py migrate
+
+# Make migrations for the polls app
+python3.7 manage.py makemigrations polls
+
+# Show migrations sql for the polls app
+python3.7 manage.py sqlmigrate polls 0001
+
+# Checks for any problems in your project without making migrations or touching the database.
+python3.7 manage.py check
+
+# Create a superuser
+python3.7 manage.py createsuperuser
+
+# Run tests for the poll app
+python3.7 manage.py test polls
